@@ -1,0 +1,8 @@
+# Ignoriere Dateien im Ordner "build"
+# build/
+
+# Ignoriere alle Dateien mit der Endung ".log"
+# *.log
+
+# Ignoriere die Datei "credentials.txt"
+# credentials.txt
