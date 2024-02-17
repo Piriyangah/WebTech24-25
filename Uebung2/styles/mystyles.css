@@ -1,0 +1,63 @@
+body {
+    font-family: Verdana; /* Schriftfarbe */
+}
+
+header{
+    background-color: #AFAFAF ; /* Hintergrundfarbe */
+    color: #FF5F00; /* Textfarbe */
+    text-align: center; /* Text zentrieren */
+}
+
+nav{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+table{  /* Tabelle komplette */
+    border-collapse: collapse;
+    width: 80%;
+    box-shadow: 10px 10px 5px grey; /* Schatten */
+}
+
+thead{ /* Tabellenkopf */
+     background-color: #76B900; /* Hintergrund */
+     color: white; /* Schriftfarbe */
+}
+
+th,td{ /* zwischen zeilen Linien */
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even){ /* jede Grade Zeile wird gefärbt */
+    background-color: #f2f2f2;
+}
+
+tr:hover{ /* Hover mit maus */
+    background-color: #ddd;
+}
+
+nav a { /* Naigation */
+    text-decoration: none;
+    border: 1px solid #0082D1;
+    background-color: #0082D1;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+nav a:hover {
+    border: 1px solid #AFAFAF;
+    background-color: #AFAFAF;
+    color: #FF5F00;
+}
+
+footer {
+    background-color: #FF5F00;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
