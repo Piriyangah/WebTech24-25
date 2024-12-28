@@ -1,0 +1,105 @@
+<!--
+* wählen Sie eine IDE aus und installieren Sie diese
+* richten Sie sich ein Git-Repository ein (z.B. WebTech24)
+* erstellen Sie im Ordner WebTech24 eine index.html und versuchen Sie 
+  darin bereits einige Inhalte einzupflegen, z.B. eine kleine persönliche 
+  Webseite oder eine Startseite von der aus alle Übungen erreichbar sind o.ä.
+* commiten und pushen Sie Ihr Repository auf einen zentralen Dienst (siehe)
+* laden Sie mich zu Ihrem Git-Dienst ein (siehe)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTech24-25 (inkl. 23-24)</title>
+</head>
+
+
+<body>
+  <!-- HEADER VON SEITE -->
+  <header>
+    <h1>Willkommen auf Piris WebTech-Seite!</h1>
+  </header>
+
+  <!-- NAVIGATION VON SEITE -->
+  <nav>
+    <a href="#uebung0">Übung 0</a>
+    <a href="#uebung1">Übung 1</a>
+    <a href="#uebung2">Übung 2</a>
+    <a href="#uebung3">Übung 3</a>
+  </nav>
+  <!-- MAIN-BODY VON SEITE -->
+  <main>
+    <section id="uebung0">
+      <h2>Übung 0</h2>
+      <ul>
+          <li>Wählen Sie eine <a href="https://freiheit.f4.htw-berlin.de/webtech/tools/#integrated-development-environment-ide" target="_blank">IDE</a> aus und installieren Sie diese</li>
+          <li>Richten Sie sich ein Git-Repository ein (z.B. WebTech24)</li>
+          <li>Erstellen Sie im Ordner WebTech24 eine <code>index.html</code> und versuchen Sie darin bereits einige Inhalte einzupflegen, z.B. eine kleine persönliche Webseite oder eine Startseite, von der aus alle Übungen erreichbar sind.</li>
+          <li>Commiten und pushen Sie Ihr Repository auf einen zentralen Dienst (<a href="https://freiheit.f4.htw-berlin.de/webtech/tools/#git" target="_blank">siehe</a>)</li>
+          <li>Laden Sie mich zu Ihrem Git-Dienst ein (<a href="https://freiheit.f4.htw-berlin.de/webtech/tools/#git" target="_blank">siehe</a>)</li>
+      </ul>
+      <a href="../Uebung0/index.html">Ergebnis</a>
+    </section>
+    
+    <section id="uebung1">
+      <h2>Übung 1</h2>
+      <ul>
+          <li>Erstellen Sie in einem <code>Uebung1</code>-Ordner eine Datei <code>uebung1.html</code>. Das <code>body</code>-Element soll ein <code>header</code>-Element, ein <code>nav</code>-Element, ein <code>section</code>-Element und ein <code>footer</code>-Element enthalten.</li>
+          <li>Unter dieser Übungsaufgabe (siehe <code>mockupdata</code>) ist der HTML-Code einer Tabelle mit allen Teilnehmerinnen einer Veranstaltung. Kopieren Sie den Inhalt der Datei so in Ihren HTML-Code, dass folgende Seite erscheint:</li>
+          <img src="../images/uebung1_bild.jpg" alt="Beispielseite für Übung 1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">          
+          <li>Es sollen 4 Unterseiten erstellt werden. Bei Klick auf diese Seiten soll die Tabelle jeweils nur die Teilnehmerinnen enthalten, deren Nachname mit dem entsprechenden Anfangsbuchstaben beginnt (also in <code>ag.html</code> nur alle Nachnamen, die mit A bis G beginnen). Die Seiten <code>ag.html</code>, <code>hl.html</code>, <code>mr.html</code> und <code>sz.html</code> sollen im Ordner <code>NN</code> abgelegt werden, der Unterordner von <code>Uebung1</code> ist.</li>
+          <li>Achten Sie darauf, dass man von jeder Unterseite auf jede andere Unterseite und auch auf die Hauptseite (<code>uebung1.html</code>) wechseln können muss.</li>
+          <li>Das einzubindende Logo des Studiengangs liegt<a href="https://freiheit.f4.htw-berlin.de/webtech/files/fiw.jpg" target="_blank">hier</a>. Es soll in einen <code>images</code>-Ordner gespeichert werden, der in der Ordner-Hierarchie neben dem <code>Uebung1</code>-Ordner liegt. Um die Größe des Bildes festzulegen, können Sie mit Hilfe des <code>style</code>-Attributes die Höhe und die Breite bestimmen: <code>style="width:53px; height:48px;"</code></li>
+          <li>Nächste Woche wird Uebung1 um CSS erweitert.</li>
+      </ul>
+      <a href="../Uebung1/uebung1.html">Ergebnis</a>
+    </section>
+
+    <section id="uebung2">
+      <ul>
+        <h2>Übung 2</h2>
+        <li>Erstellen Sie (falls noch nicht geschehen) eine <cold>index.html</cold>-Datei in Ihrem Repository-Ordner (also z.B. <code>WebTech24</code>) derart, dass diese direkte Links auf Ihre Lösungen der Übungen enthalten (z.B. in einer Tabelle oder einer Liste).</li>
+        <li>Kopieren Sie den Ordner <code>Uebung1</code> in den Ordner <code>Uebung2</code> (also inkl. Ordner <code>NN</code>). Ändern Sie darin die Datei <code>uebung1.html</code> zu <code>uebung2.html</code> (umbenennen). Ändern Sie entsprechend alle Links innerhalb der Datei, damit Sie z.B. auf den Ordner <code>Uebung2/NN</code> zugreifen und nicht mehr auf <code>Uebung1/NN</code>.</li>
+        <li>Legen Sie sich im <code>Uebung2</code>-Ordner einen Ordner <code>styles</code> an. Erstellen Sie in dem <code>styles</code>-Ordner eine Datei <code>mystyles.css</code>.</li>
+        <li>Fügen Sie im <code>&lt;head&gt;</code>-Bereich der <code>uebung2.html</code> eine logische Verknüpfung zur <code>mystyles.css</code>-Datei ein (<code>&lt;link href="./styles/mystyles.css" rel="stylesheet"&gt;</code>).</li>
+        <li>In <code>mystyles.css</code> definieren Sie (versuchen Sie so viel wie möglich der folgenden Punkte umzusetzen, probieren Sie auch ruhig selbst etwas aus):</li>
+        <ul>
+          <li>Verdana als Schriftart für das ganze Dokument</li>
+          <li>der <code>&lt;header&gt;</code> soll das HTW-Grau als Hintergrundfarbe, HTW-Orange als Schriftfarbe und der Text zentriert sein (siehe <a href="https://corporatedesign.htw-berlin.de/schrift-farbe/markenfarben/" target="_blank">Corporate Design</a>).</li>
+          <li>die Tabelle soll ungefähr wie dargestellt aussehen:</li>
+          <img src="../images/uebung2_bild1.png" alt="Beispielseite für Übung 1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">          
+          <li>d.h. mit Rahmen, mit einem Schatten, die Spaltenüberschriften in weiß, mit HTW-grünem Hintergrund.</li>
+          <li><code>&lt;a&gt;</code>-Elemente in einem <code>&lt;nav&gt;</code>-Element haben einen grauen Rand, deren Ecken abgerundet sind. Die Hintergrundfarbe ist HTW-blau. Schriftart ist weiß und bold. <code>&lt;a&gt;</code>-Elemente in einem <code>&lt;nav&gt;</code>-Element sind nicht unterstrichen!</li>
+          <img src="../images/uebung2_bild2.png" alt="Beispielseite für Übung 1" style="width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <li>Der <code>&lt;footer&gt;</code> ist in HTW-Orange, die Schrift ist schwarz, der Text ist mittig und die Schrift ist kleiner. Die Höhe des footers entsteht dadurch, dass die Schrift einen Abstand (informieren Sie sich über den Unterschied von <code>&lt;margin&gt;</code> und <code>&lt;padding&gt;</code>) nach oben und nach unten von jeweils <code>&lt;20px&gt;</code> hat.</li>
+        </ul>
+      <li>Am Ende soll es ungefähr so aussehen:</li>
+      <img src="../images/uebung2_bild3.png" alt="Beispielseite für Übung 1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      </ul>
+      <a href="../Uebung2/uebung2.html">Ergebnis</a>
+    </section>
+
+    <section id="uebung3">
+        <h2>Übung 3</h2>
+        <ul>
+          <li>Erstellen Sie einen <code>Uebung3</code>-Ordner und darin eine Datei <code>uebung3.html</code>. Kopieren Sie <a href="https://freiheit.f4.htw-berlin.de/webtech/files/uebung3.html" target="_blank">diesen Inhalt</a> in uebung3.html (Rechtsklick auf die Seite und <code>Seitenquelltext anzeigen</code> - falls ein <code>&lt;script&gt;</code>-Element unten ist, können Sie es löschen; Sie können es <a href="../Uebung3/vorlage" target="_blank"> auch unten kopieren).</a></li>
+          <li>Laden Sie sich hier die Datei <a href="../Uebung3/images.zip" download> images.zip</a> herunter, entpacken Sie sie und schieben Sie den <code>images</code>-Ordner samt Inhalt in den <code>Uebung3</code>-Ordner.</li>
+          <li>Implementieren Sie die <code>uebung3.html</code> so, dass ungefähr folgendes Aussehen entsteht:</li>
+          <img src="../images/uebung3_bild.png" alt="Beispielseite für Übung 1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <li>Sie können die CSS-Eigenschaften innerhalb der <code>uebung3.html</code> im <code>&ltstyle&gt</code>-Element definieren oder wieder in einer externen Datei.</li>
+          <li>Ziele der Übung sind die Anwendung von CSS-Grid (siehe z.B. <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">hier</a>) sowie die Verwendung von Größen und Einheiten (siehe z.B. <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units" target="_blank">hier</a>). Lassen Sie Ihrer Kreativität freien Lauf!</li>
+        </ul>
+    </section>
+
+
+    
+  </main>
+  <!-- FOOTER VON SEITE -->
+  <footer>
+    <p>© 2024 WebTech24</p>
+  </footer>
+    
+</body>
+</html>
