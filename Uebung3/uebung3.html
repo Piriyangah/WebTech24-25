@@ -6,20 +6,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uebung 3</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: rgb(60, 121, 60);
+            color: white;
+            padding: 1%;
+            text-align: center;
+            font-size: large;
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        }
+        /*
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        */
+
+        .wrapper {
+            margin: 2% auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*-- soviele wie es reinpassen*/
+            /*grid-template-columns: repeat(4, 1fr);  -- Maximal 4 Spalten */
+            gap: 1rem;
+            max-width: 1200px;
+        }
+
+        .citycard {
+            background-color: white;
+            border-radius: 10px;
+            display: grid;
+            flex-direction: column;
+            grid-template-rows: auto 1fr;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            overflow: hidden;
+        }
+
+        .cityimage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px; 
+            background-color: #f4f4f4; 
+            padding: 10%;
+            overflow: hidden;
+        }
+
+        .cityimage img {
+            max-width: 100%; /*keine Überdehnung des Bildes mit max-width wie bei width */
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .cityname {
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 10px;
+            background-color: #d4e6d0;
+            color: #333;
+            border-top: 1px solid #ddd;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <h2>STÄDTE</h2>
+        <a href="../Uebung0/index.html" target="_blank">Startseite</a>
     </header>
     <main>
-
-
         <section class="wrapper">
             <div class="citycard">
 
                 <div class="cityimage">
-                    <img src="./images/berlin.png" alt="Berlin">
+                    <img src="../Uebung3/images/images/berlin.png" alt="Berlin">
                 </div>
                 <div class="cityname">
                     <p>Berlin</p>
@@ -28,7 +98,7 @@
 
             <div class="citycard">
                 <div class="cityimage">
-                    <img src="./images/bernau.png" alt="Bernau">
+                    <img src="../Uebung3/images/images/bernau.png" alt="Bernau">
                 </div>
                 <div class="cityname">
                     <p>Bernau</p>
@@ -37,7 +107,7 @@
 
             <div class="citycard">
                 <div class="cityimage">
-                    <img src="./images/brandenburg.png" alt="Brandenburg">
+                    <img src="../Uebung3/images/images/brandenburg.png" alt="Brandenburg">
                 </div>
                 <div class="cityname">
                     <p>Brandenburg</p>
@@ -46,7 +116,7 @@
 
             <div class="citycard">
                 <div class="cityimage">
-                    <img src="./images/bremen.png" alt="Bremen">
+                    <img src="../Uebung3/images/images/bremen.png" alt="Bremen">
                 </div>
                 <div class="cityname">
                     <p>Bremen</p>
@@ -55,7 +125,7 @@
 
             <div class="citycard">
                 <div class="cityimage">
-                    <img src="./images/bremerhaven.png" alt="Bremerhaven">
+                    <img src="../Uebung3/images/images/bremerhaven.png" alt="Bremerhaven">
                 </div>
                 <div class="cityname">
                     <p>Bremerhaven</p>
@@ -64,7 +134,7 @@
 
             <div class="citycard">
                 <div class="cityimage">
-                    <img src="./images/madrid.png" alt="Madrid">
+                    <img src="../Uebung3/images/images/madrid.png" alt="Madrid">
                 </div>
                 <div class="cityname">
                     <p>Madrid</p>
@@ -73,7 +143,7 @@
 
             <div class="citycard">
                 <div class="cityimage">
-                    <img src="./images/magdeburg.png" alt="Magdeburg">
+                    <img src="../Uebung3/images/images/magdeburg.png" alt="Magdeburg">
                 </div>
                 <div class="cityname">
                     <p>Magdeburg</p>
@@ -82,7 +152,7 @@
 
             <div class="citycard">
                 <div class="cityimage">
-                    <img src="./images/mainz.png" alt="Mainz">
+                    <img src="../Uebung3/images/images/mainz.png" alt="Mainz">
                 </div>
                 <div class="cityname">
                     <p>Mainz</p>
@@ -91,7 +161,7 @@
 
             <div class="citycard">
                 <div class="cityimage">
-                    <img src="./images/mannheim.png" alt="Mannheim">
+                    <img src="../Uebung3/images/images/mannheim.png" alt="Mannheim">
                 </div>
                 <div class="cityname">
                     <p>Mannheim</p>
@@ -100,7 +170,7 @@
 
             <div class="citycard">
                 <div class="cityimage">
-                    <img src="./images/Marburg.png" alt="Marburg">
+                    <img src="../Uebung3/images/images/Marburg.png" alt="Marburg">
                 </div>
                 <div class="cityname">
                     <p>Marburg</p>
@@ -109,7 +179,7 @@
 
             <div class="citycard">
                 <div class="cityimage">
-                    <img src="./images/newyork.png" alt="New York">
+                    <img src="../Uebung3/images/images/newyork.png" alt="New York">
                 </div>
                 <div class="cityname">
                     <p>New York</p>
@@ -118,7 +188,7 @@
 
             <div class="citycard">
                 <div class="cityimage">
-                    <img src="./images/stockholm.png" alt="Stockholm">
+                    <img src="../Uebung3/images/images/stockholm.png" alt="Stockholm">
                 </div>
                 <div class="cityname">
                     <p>Stockholm</p>
@@ -131,5 +201,4 @@
 
     </footer>
 </body>
-
 </html>

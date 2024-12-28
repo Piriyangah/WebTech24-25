@@ -1,20 +1,10 @@
-<!--
-* wählen Sie eine IDE aus und installieren Sie diese
-* richten Sie sich ein Git-Repository ein (z.B. WebTech24)
-* erstellen Sie im Ordner WebTech24 eine index.html und versuchen Sie 
-  darin bereits einige Inhalte einzupflegen, z.B. eine kleine persönliche 
-  Webseite oder eine Startseite von der aus alle Übungen erreichbar sind o.ä.
-* commiten und pushen Sie Ihr Repository auf einen zentralen Dienst (siehe)
-* laden Sie mich zu Ihrem Git-Dienst ein (siehe)
--->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebTech24-25 (inkl. 23-24)</title>
 </head>
-
 
 <body>
   <!-- HEADER VON SEITE -->
@@ -28,11 +18,18 @@
     <a href="#uebung1">Übung 1</a>
     <a href="#uebung2">Übung 2</a>
     <a href="#uebung3">Übung 3</a>
+    <a href="#uebung4">Übung 4</a>
+    <a href="#uebung4a">Übung 4a</a>
+    <a href="#uebung5">Übung 5</a>
+    <a href="#uebung6">Übung 6</a>
+    <a href="#uebung7">Übung 7</a>
+    <a href="#uebung8">Übung 8</a>
+    <a href="#uebung9">Übung 9</a>
   </nav>
   <!-- MAIN-BODY VON SEITE -->
   <main>
     <section id="uebung0">
-      <h2>Übung 0</h2>
+      <h2>Übung 0 - Infrastruktur einrichten</h2>
       <ul>
           <li>Wählen Sie eine <a href="https://freiheit.f4.htw-berlin.de/webtech/tools/#integrated-development-environment-ide" target="_blank">IDE</a> aus und installieren Sie diese</li>
           <li>Richten Sie sich ein Git-Repository ein (z.B. WebTech24)</li>
@@ -44,11 +41,11 @@
     </section>
     
     <section id="uebung1">
-      <h2>Übung 1</h2>
+      <h2>Übung 1 - HTML</h2>
       <ul>
           <li>Erstellen Sie in einem <code>Uebung1</code>-Ordner eine Datei <code>uebung1.html</code>. Das <code>body</code>-Element soll ein <code>header</code>-Element, ein <code>nav</code>-Element, ein <code>section</code>-Element und ein <code>footer</code>-Element enthalten.</li>
           <li>Unter dieser Übungsaufgabe (siehe <code>mockupdata</code>) ist der HTML-Code einer Tabelle mit allen Teilnehmerinnen einer Veranstaltung. Kopieren Sie den Inhalt der Datei so in Ihren HTML-Code, dass folgende Seite erscheint:</li>
-          <img src="../images/uebung1_bild.jpg" alt="Beispielseite für Übung 1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">          
+          <img src="../images/uebung1_bild.jpg" alt="Beispiel Übung 1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">          
           <li>Es sollen 4 Unterseiten erstellt werden. Bei Klick auf diese Seiten soll die Tabelle jeweils nur die Teilnehmerinnen enthalten, deren Nachname mit dem entsprechenden Anfangsbuchstaben beginnt (also in <code>ag.html</code> nur alle Nachnamen, die mit A bis G beginnen). Die Seiten <code>ag.html</code>, <code>hl.html</code>, <code>mr.html</code> und <code>sz.html</code> sollen im Ordner <code>NN</code> abgelegt werden, der Unterordner von <code>Uebung1</code> ist.</li>
           <li>Achten Sie darauf, dass man von jeder Unterseite auf jede andere Unterseite und auch auf die Hauptseite (<code>uebung1.html</code>) wechseln können muss.</li>
           <li>Das einzubindende Logo des Studiengangs liegt<a href="https://freiheit.f4.htw-berlin.de/webtech/files/fiw.jpg" target="_blank">hier</a>. Es soll in einen <code>images</code>-Ordner gespeichert werden, der in der Ordner-Hierarchie neben dem <code>Uebung1</code>-Ordner liegt. Um die Größe des Bildes festzulegen, können Sie mit Hilfe des <code>style</code>-Attributes die Höhe und die Breite bestimmen: <code>style="width:53px; height:48px;"</code></li>
@@ -59,7 +56,7 @@
 
     <section id="uebung2">
       <ul>
-        <h2>Übung 2</h2>
+        <h2>Übung 2 - CSS</h2>
         <li>Erstellen Sie (falls noch nicht geschehen) eine <cold>index.html</cold>-Datei in Ihrem Repository-Ordner (also z.B. <code>WebTech24</code>) derart, dass diese direkte Links auf Ihre Lösungen der Übungen enthalten (z.B. in einer Tabelle oder einer Liste).</li>
         <li>Kopieren Sie den Ordner <code>Uebung1</code> in den Ordner <code>Uebung2</code> (also inkl. Ordner <code>NN</code>). Ändern Sie darin die Datei <code>uebung1.html</code> zu <code>uebung2.html</code> (umbenennen). Ändern Sie entsprechend alle Links innerhalb der Datei, damit Sie z.B. auf den Ordner <code>Uebung2/NN</code> zugreifen und nicht mehr auf <code>Uebung1/NN</code>.</li>
         <li>Legen Sie sich im <code>Uebung2</code>-Ordner einen Ordner <code>styles</code> an. Erstellen Sie in dem <code>styles</code>-Ordner eine Datei <code>mystyles.css</code>.</li>
@@ -69,32 +66,154 @@
           <li>Verdana als Schriftart für das ganze Dokument</li>
           <li>der <code>&lt;header&gt;</code> soll das HTW-Grau als Hintergrundfarbe, HTW-Orange als Schriftfarbe und der Text zentriert sein (siehe <a href="https://corporatedesign.htw-berlin.de/schrift-farbe/markenfarben/" target="_blank">Corporate Design</a>).</li>
           <li>die Tabelle soll ungefähr wie dargestellt aussehen:</li>
-          <img src="../images/uebung2_bild1.png" alt="Beispielseite für Übung 1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">          
+          <img src="../images/uebung2_bild1.png" alt="Beispiel Übung 2.1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">          
           <li>d.h. mit Rahmen, mit einem Schatten, die Spaltenüberschriften in weiß, mit HTW-grünem Hintergrund.</li>
           <li><code>&lt;a&gt;</code>-Elemente in einem <code>&lt;nav&gt;</code>-Element haben einen grauen Rand, deren Ecken abgerundet sind. Die Hintergrundfarbe ist HTW-blau. Schriftart ist weiß und bold. <code>&lt;a&gt;</code>-Elemente in einem <code>&lt;nav&gt;</code>-Element sind nicht unterstrichen!</li>
-          <img src="../images/uebung2_bild2.png" alt="Beispielseite für Übung 1" style="width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="../images/uebung2_bild2.png" alt="Beispiel Übung 2.2" style="width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
           <li>Der <code>&lt;footer&gt;</code> ist in HTW-Orange, die Schrift ist schwarz, der Text ist mittig und die Schrift ist kleiner. Die Höhe des footers entsteht dadurch, dass die Schrift einen Abstand (informieren Sie sich über den Unterschied von <code>&lt;margin&gt;</code> und <code>&lt;padding&gt;</code>) nach oben und nach unten von jeweils <code>&lt;20px&gt;</code> hat.</li>
         </ul>
       <li>Am Ende soll es ungefähr so aussehen:</li>
-      <img src="../images/uebung2_bild3.png" alt="Beispielseite für Übung 1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <img src="../images/uebung2_bild3.png" alt="Beispiel Übung 2.3" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
       </ul>
       <a href="../Uebung2/uebung2.html">Ergebnis</a>
     </section>
 
     <section id="uebung3">
-        <h2>Übung 3</h2>
+        <h2>Übung 3 - Grid und Einheiten</h2>
         <ul>
           <li>Erstellen Sie einen <code>Uebung3</code>-Ordner und darin eine Datei <code>uebung3.html</code>. Kopieren Sie <a href="https://freiheit.f4.htw-berlin.de/webtech/files/uebung3.html" target="_blank">diesen Inhalt</a> in uebung3.html (Rechtsklick auf die Seite und <code>Seitenquelltext anzeigen</code> - falls ein <code>&lt;script&gt;</code>-Element unten ist, können Sie es löschen; Sie können es <a href="../Uebung3/vorlage" target="_blank"> auch unten kopieren).</a></li>
           <li>Laden Sie sich hier die Datei <a href="../Uebung3/images.zip" download> images.zip</a> herunter, entpacken Sie sie und schieben Sie den <code>images</code>-Ordner samt Inhalt in den <code>Uebung3</code>-Ordner.</li>
           <li>Implementieren Sie die <code>uebung3.html</code> so, dass ungefähr folgendes Aussehen entsteht:</li>
-          <img src="../images/uebung3_bild.png" alt="Beispielseite für Übung 1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="../images/uebung3_bild.png" alt="Beispiel Übung 3" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
           <li>Sie können die CSS-Eigenschaften innerhalb der <code>uebung3.html</code> im <code>&ltstyle&gt</code>-Element definieren oder wieder in einer externen Datei.</li>
           <li>Ziele der Übung sind die Anwendung von CSS-Grid (siehe z.B. <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">hier</a>) sowie die Verwendung von Größen und Einheiten (siehe z.B. <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units" target="_blank">hier</a>). Lassen Sie Ihrer Kreativität freien Lauf!</li>
         </ul>
+      <a href="../Uebung3/uebung3.html">Ergebnis</a>
     </section>
 
+    <section id="uebung4">
+      <h2>Übung 4 - Bootstrap</h2>
+      <ul>
+        <li>Erstellen Sie einen <code>Uebung4</code>-Ordner und darin eine Datei <code>uebung4.html</code>.</li>
+        <li>Implementieren Sie die <code>uebung4.html</code> mithilfe von Bootstrap so, dass ungefähr folgendes</li>
+        <li>Aussehen entsteht:</li>
+        <img src="../images/uebung4_bild.png" alt="Beispiel Übung 4" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <li>Ziel der Übung ist die Anwendung von CSS-Bootstrap und das Erstellen von Formularen. (Content Delivery Networks (CDN) -- dann sieht es folgendermaßen aus:</li>
+        <pre><code>
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+            &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+                  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"&gt;
+            &lt;title&gt;Title&lt;/title&gt;
+        &lt;/head&gt;
+        </code></pre>
+        <p>Den entsprechenden Link zum CDN finden Sie auf der <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank">Bootstrap-Webseite</a>.
+        <p>Sie können die CSS-Dateien aber auch herunterladen. Auf der <a href="https://getbootstrap.com/docs/5.3/getting-started/download/" target="_blank">Download Bootstrap-Webseite</a> klicken Sie unter "Compiled CSS and JS" auf den "Download"-Button. Sie erhalten eine Datei <code>bootstrap-5.1.3-dist.zip</code>. Entpacken Sie diese Datei. Der entstehende Ordner enthält 2 Unterordner <code>css</code> und <code>js</code>. Letzterer enthält JavaScript-Dateien des Frameworks. Diese benötigen wir für unsere Zwecke hier (noch) nicht. Verschieben Sie den css-Ordner in Ihren Projekt-Ordner (z.B. <code>Webtech20</code>). Dann können Sie diese externen Dateien mit dem <code>&lt;link&gt;</code>-Tag wie bekannt einbinden. Der <code>&lt;head&gt;</code> sieht dann so aus:</p>
+        <pre><code>
+          &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+              &lt;link rel="stylesheet" href="./css/bootstrap.min.css"&gt;
+              &lt;title&gt;Title&lt;/title&gt;
+          &lt;/head&gt;
+          </code></pre>
+          <a href="../Uebung4/uebung4.html">Ergebnis</a>
+      </ul>
+    </section>
 
+    <section id="uebung4a">
+      <h2>Übung 4a - JavaScript</h2>
+      <ul>
+        <li>Erweitern Sie einen die Datei <code>uebung4.html</code> aus dem <code>Uebung4</code>-Ordner.</li>
+        <li>Sind in das Formular Daten eingegeben und wird der <code>Registrieren</code>-Button gedrückt, dann erscheint mithilfe einer JavaScript-Funktion:</li>
+        <img src="../images/uebung4a_bild1.png" alt="Beispiel für Übung 4a.1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <li>Wird der <code>Abbrechen</code>-Button gedrückt, werden alle bereits eingegebenen Daten wieder aus den Textfeldern entfernt.</li>
+        <li>Prüfen Sie außerdem die Eingaben (siehe <a href="https://getbootstrap.com/docs/5.3/forms/validation/" target="_blank">Validation</a>)</li>
+        <img src="../images/uebung4a_bild2.png" alt="Beispiel für Übung 4a.2" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <img src="../images/uebung4a_bild3.png" alt="Beispiel für Übung 4a.3" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <li>Ziel der Übung ist die Anwendung von JavaScript.</li>
+      </ul>
+    </section>
+
+    <section id="uebung5">
+      <h2>Übung 5 - JavaScript,DOM</h2>
+      <ul>
+        <li>Laden Sie <a href="https://gitlab.rz.htw-berlin.de/freiheit/webtech24/-/blob/main/Uebung5.zip" target="_blank">hier</a> die Datei <code>Uebung5.zip</code> herunter, entpacken Sie sie und schieben den Ordner <code>Uebung5</code> in Ihren Projektordner.</li>
+        <li>In der Datei uebung5.html sind einige Dinge vorbereitet:</li>
+          <ul>
+            <li>eine Tabelle mit leerem &lt;tbody&gt;. Der &lt;tbody&gt; hat die <code>id='tbody'</code>,</li>
+            <li>wird die Seite geladen, wird die <code>init()</code>-Funktion aufgerufen (<code>onload='init()'</code>),</li>
+            <li>eine JavaScript-Funktion <code>getStaedte()</code>. Diese Funktion "holt" die Datei <code>staedte.json</code> (liegt im <code>Uebung5</code>-Ordner) und gibt sie zurück,</li>
+            <li>eine Variable <code>staedtearr</code>, in der das Array geladen werden soll, das die <code>staedte.json</code> enthält. Achtung! das Array selbst ist der Wert, der im JSON unter dem Schlüssel <code>staedte</code> steht (schauen Sie sich die Datei <code>staedte.json</code> an),</li>
+            <li>eine JavaScript-Funktion <code>createTable()</code>, die Sie verwenden sollen, um die Tabelle mit Werten zu befüllen. Schauen Sie sich auch die Kommentare in <code>uebung5.html</code> an.</li>
+          </ul>
+          <li>Befüllen Sie die Tabelle unter Verwendung der Daten aus <code>staedte.json</code></li>
+          <ul>
+            <li>für jede neu entstehende Tabellenzeile müssen Sie fünf neue <code>td</code>-Objekte kreieren und diese an ein neu kreiertes <code>tr</code>-Objekt anhängen. Das <code>tr</code>-Obejkt hängen Sie wiederum an den <code>tbody</code>.</li>
+            <li>die Nummer in der ersten Spalte erstellen Sie einfach fortlaufend mit dem Wert von <code>nr</code>, den Sie für jede Zeile erhöhen.</li>
+            <li>der Info-Button ist ein Hyperlink mit der Bootstrap-Klasse <code>btn</code>; also <code>&lt;a class="btn btn-success btn-sm" href=""&gt;Info&lt;/a&gt;</code>. Der Wert für <code>href</code> findet sich jeweils unter dem <code>link</code> für jede Stadt in <code>staedte.json</code>.</li>
+            <li>für das Bild verwenden Sie den <code>bild</code>-Link aus <code>staedte.json</code> als <code>src</code>. Geben Sie auch dem Attribut <code>alt</code> einen Wert (die <code>stadt</code> aus <code>staedte.json</code>).</li>
+            <li>die Tabelle sieht dann so aus:</li>
+          </ul>
+          <img src="../images/uebung5_bild1.png" alt="Beispiel Übung 5.1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <li>Bei Eingabe in das Textfeld von <code>Filter</code> wird bei jedem Zeichen, das eingegeben wird, die Funktion <code>createTable()</code> aufgerufen (siehe <code>oninput="createTable()"</code>). Es sollen nun nur noch die Städte angezeigt werden, deren Stadtnamen oder deren Gründungsjahr zur Eingabe passt.</li>
+          <ul>
+            <li>Wird also z.B. <code>br</code> eingegeben, dann erscheinen nur die Städte, die mit <code>Br</code> beginnen (Groß- und Kleinschreibung egal, siehe <code>toLowerCase()</code>):</li>
+            <img src="../images/uebung5_bild2.png" alt="Beispiel Übung 5.2" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li>Wird also z.B. <code>12</code> eingegeben, dann erscheinen nur die Städte, deren Gründungsjahr mit <code>12</code> beginnt:</li>
+            <img src="../images/uebung5_bild3.png" alt="Beispiel Übung 5.3" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          </ul>
+          <li>Tipp: Sie laufen in einer Schleife durch das Array, um alle Städte auszulesen. Fügen Sie darin eine Bedingung ein, dass Sie nur die Städte der Tabelle hinzufügen, die der Filter-Eingabe entsprechen.</li>
+      </ul>
+    </section>
     
+    <section id="uebung6">
+      <h2>Übung 6 - Angular Komponenten</h2>
+      <ul>
+        <li>Erstellen Sie ein neues Angular-Projekt <code>Uebung6</code> (siehe <a href="https://freiheit.f4.htw-berlin.de/webtech/angular/#erstes-projekt-erstellen" target="_blank">hier</a>).</li>
+        <li>Erstellen Sie mindestens folgende Komponenten: <code>header</code>, <code>nav</code>, <code>footer</code>, <code>table</code> und <code>form</code></li>
+        <li>Gestalten Sie <code>header</code>, <code>nav</code> und <code>footer</code> so, dass es ungefähr so aussieht:</li>
+        <img src="../images/uebung6_bild1.png" alt="Beispiel Übung 6.1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <p>Diese drei Komponenten sollen mittels Komponentenselektoren in die <code>AppComponent</code> eingebunden werden.</p>
+        <li>Erstellen Sie für die <code>TableComponent</code> die Route <code>read</code> und für die <code>FormComponent</code> die Route <code>create</code>, so dass für <code>localhost:4200/create</code> ungefähr folgende Ansicht erscheint:</li>
+        <img src="../images/uebung6_bild2.png" alt="Beispiel Übung 6.2" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <p>Diese Komponente enthält ein Formular. Für <code>localhost:4200/read</code> erscheint ungefähr folgende Ansicht:</p>
+        <img src="../images/uebung6_bild3.png" alt="Beispiel Übung 6.3" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <p>Diese Komponente enthält eine Tabelle. Es ist nur der Tabellenkopf mit den Spaltenüberschriften zu sehen.</p>
+        <li>In der nächsten Übung befüllen wir die Tabelle mithilfe eines Services.</li>
+      </ul>
+    </section>
+
+    <section id="uebung7">
+      <h2>Übung 7 - JSON, Templates, Service</h2>
+      <ul>
+        <li>Nutzen Sie Ihre Implementierung aus <code>Uebung6</code> - wenn nicht, erstellen Sie ein neues Angular-Projekt <code>Uebung7</code> (siehe <a href="https://freiheit.f4.htw-berlin.de/webtech/angular/#erstes-projekt-erstellen" target="_blank">hier</a>).</li>
+        <li>Erstellen Sie im <code>public</code>-Ordner eine Datei <code>members.json</code> mit folgendem Inhalt:</li>
+        <a href="../assets/members.json">members.json</a>
+        <li>Erstellen Sie einen Service <code>members.service.ts</code>, in dem die <code>members.json</code> per <code>fetch()</code> eingelesen wird und der eine Funktion zur Verfügung stellt, die alle <code>members</code> als Array zurückgibt. Erstellen Sie ein passendes <code>Members</code>-Interface, um die Typsicherheit zu verbessern.</li>
+        <li>Befüllen Sie mit den Daten aus <code>members.json</code> eine Tabelle:</li>
+        <img src="../images/uebung7_bild1.png" alt="Beispiel Übung 7.1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <li>Implementieren Sie für das Suchfeld die Behandlung des <code>input</code>-Ereignisses so, dass nur die Teilnehmerinnen in der Tabelle erscheinen, deren Vor- oder Nachnamen den Suchstring enthalten:</li>
+        <img src="../images/uebung7_bild2.png" alt="Beispiel Übung 7.2" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <li>Alle Bilder sind nur Anregungen, kann gerne ganz anders aussehen. Gerne können Sie auch Bootstrap einbinden und verwenden (siehe z.B. <a href="https://medium.com/@interviewpro/adding-bootstrap-to-your-angular-project-2e543ef52bef" target="_blank">hier</a>).</li>
+      </ul>
+    </section>
+
+    <section id="uebung8">
+      <h2>Übung 8</h2>
+      <ul>
+        <li></li>
+      </ul>
+    </section>
+
+    <section id="uebung9">
+      <h2>Übung 9</h2>
+      <ul>
+        <li></li>
+      </ul>
+    </section>
+
   </main>
   <!-- FOOTER VON SEITE -->
   <footer>
