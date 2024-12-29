@@ -3,36 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- mportiert die Bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Übung 4</title>
-    
+
+    <style>
+        /* Initiale Ausblendung für korrekte und inkorrekte Nachrichten */
+        #korrekt {
+            display:none;
+        }
+
+        #inkorrekt {
+            display:none;
+            color: red;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-    <h1 class="m-5">Teilnehmerin Registrierung</h1>
-    <div class="row g-3">
-        <div class="form-floating col-6">
+    <div class="container"> <!-- Container für die Anordnung der Elemente -->
+    <h1 class="m-5">Teilnehmerin Registrierung</h1> <!-- oberen und unteren Margin von m-5 -->
+    <div class="row g-3"> <!-- row für die Anordnung der Elemente in einer Reihe und g-3 für den Abstand zwischen den Elementen -->
+        <div class="form-floating col-6"> <!-- form-floating für die Anordnung der Elemente und col-6 für die Breite der Elemente Belegt die Hälfte der Breite (50%)-->
             <input type="text" class="form-control" id="firstName" placeholder="First Name" aria-label="First name">
             <label for="firstName">First Name</label>
+            <div class="valid-feedback">Korrekt!</div> <!-- Feedback für akzeptierte Werte -->
         </div>
+
         <div class="form-floating col-6">
             <input type="text" class="form-control" id="lastName" placeholder="Last name" aria-label="Last name">
             <label for="lastName">Last Name</label>
+            <div class="valid-feedback">Korrekt!</div>
         </div>
+
         <div class="form-floating col-6">
             <input type="email" class="form-control" id="email" placeholder="E-Mail" aria-label="Email">
             <label for="email">E-Mail</label>
+            <div class="valid-feedback">Korrekt!</div>
         </div>
+
         <div class="form-floating col-6">
-            <input type="text" class="form-control" id="ipadress" placeholder="IP-Adresse" aria-label="IPAdress">
-            <label for="ipadress">IP-Adresse</label>
+            <input type="password" class="form-control" id="password" placeholder="Passwort" aria-label="Passwort">
+            <label for="password">Passwort</label>
+            <div class="valid-feedback">Korrekt!</div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="col-3">
+            <button type="submit" class="btn btn-secondary" onclick="reset()">Abbrechen</button> <!-- reset funktion -->
         </div>
         <div class="col-3">
-            <button type="submit" class="btn btn-secondary">Abbrechen</button>
+            <button type="submit" class="btn btn-success" onclick="submit()">Registrieren</button> <!-- übergabe funktion -->
         </div>
-        <div class="col-3">
-            <button type="submit" class="btn btn-success">Registrieren</button>
-        </div>
+
+        <!-- Bereich für korrekt Eingaben -->
+         <div id="korrekt">
+            <h4 class="mt-5">Eingegebene Werte:</h4>
+            <ul id="result" class="list-group"></ul>
+         </div>
+        <!-- Bereich für inkorrekte Eingaben -->
+        <div id="inkorrekt">
+            <h4 class="mt-5">Bitte Eingaben korrigieren</h4>
     </div>
 </body>
+
+<!-- <script>-Block kommt der gesamte JavaScript-Code, der die Funktionalität der Seite steuert -->
+<script>
+    // Funktion zum Zurücksetzen des Formulars
+    function reset() {
+        document.querySelector('#firstName').value = ''
+        document.querySelector('#lastName').value = ''
+        document.querySelector('#email').value = ''
+        document.querySelector('#password').value = ''
+
+        document.querySelector('#firstName').classList.remove('is-valid', 'is-invalid')
+        document.querySelector('#lastName').classList.remove('is-valid', 'is-invalid')
+        document.querySelector('#email').classList.remove('is-valid', 'is-invalid')
+        document.querySelector('#password').classList.remove('is-valid', 'is-invalid')
+    }
+
+    // Funktion zur E-Mail-Validierung
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // Funktion zur Passwort-Validierung
+    function validatePassword(password) {
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,}$/;
+        return passwordRegex.test(password);
+    }
+
+    // Funktion zur Verarbeitung der Eingaben bei Klick auf "Registrieren"
+    function submit() {
+        console.log('Button submit geklickt...');
+        // Abrufen der Eingabewerte
+        let firstName = document.querySelector('#firstName');
+        let firstNameValue = firstName.value;
+
+        let lastName = document.querySelector('#lastName');
+        let lastNameValue = lastName.value;
+
+        let email = document.querySelector('#email');
+        let emailValue = email.value;
+
+        let password = document.querySelector('#password');
+        let passwordValue = password.value;
+
+        // Validierung für Vorname
+        if(firstNameValue ==''){
+            firstName.classList.add('is-invalid')   
+            firstName.classList.remove('is-valid')
+        } else{
+            firstName.classList.add('is-valid')
+            firstName.classList.remove('is-invalid')
+        }
+
+        // Validierung für Nachname
+        if(lastNameValue ==''){
+            lastName.classList.add('is-invalid')   
+            lastName.classList.remove('is-valid')
+        } else{
+            lastName.classList.add('is-valid')
+            lastName.classList.remove('is-invalid')
+        }
+
+        // Validierung für E-Mail
+        if(emailValue == '' || !emailValue.includes('@') || !validateEmail(emailValue)) {
+            email.classList.add('is-invalid')   
+            email.classList.remove('is-valid')
+        } else{
+            email.classList.add('is-valid')
+            email.classList.remove('is-invalid')
+        }
+
+        // Validierung für Passwort
+        if(passwordValue == '' || !validatePassword(passwordValue)) {
+            password.classList.add('is-invalid')
+            password.classList.remove('is-valid')
+        } else {
+            password.classList.add('is-valid')
+            password.classList.remove('is-invalid')
+        }
+
+        // Überprüfung, ob alle Eingaben korrekt sind
+        let korrekt = (firstNameValue != '') 
+                    && (lastNameValue != '') 
+                    && (emailValue != '' && validateEmail(emailValue))
+                    && (passwordValue != '' && validatePassword(passwordValue))
+
+        console.log('first name value : ', firstNameValue)
+        console.log('last name value : ', lastNameValue)
+        console.log('email value : ', emailValue)
+        console.log('password value : ', passwordValue)
+
+        if(korrekt){
+            document.querySelector('#inkorrekt').style.display = 'none';
+            document.querySelector('#korrekt').style.display = 'block';
+            let resultsList = document.querySelector('#result');
+            resultsList.innerHTML = `<li class="list-group-item"> Vorname:  ${firstNameValue} </li>
+                                    <li class="list-group-item"> Nachname:  ${lastNameValue} </li>
+                                    <li class="list-group-item"> E-Mail:    ${emailValue} </li>
+                                    <li class="list-group-item"> Passwort:  ${passwordValue} </li>`;
+        } else {
+            document.querySelector('#inkorrekt').style.display = 'block';
+            document.querySelector('#korrekt').style.display = 'none';
+        }
+    }
+</script>
 </html>

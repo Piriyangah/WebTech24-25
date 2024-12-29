@@ -1,2 +1,1 @@
-# WebTech23
-Dozent Herr Freiheit
+# WebTech24-25 (Dozent Herr Freiheit)
