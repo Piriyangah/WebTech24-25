@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/css/bootstrap.css" rel="stylesheet">
+    <title>Uebung 5</title>
+    <style>
+        img {
+            width: 50px;
+            max-height: 50px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="container" onload="init()">
+    <h1>Städte</h1>
+    <div class="row my-4">
+        <div class="col-2">
+            <label for="filter">Filter:</label>
+        </div>
+        <div class="col-10">
+            <input type="text" class="form-control" id="filter" oninput="createTable()"/>
+        </div>     
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle">
+            <thead>
+                <tr>
+                    <th scope="col">Nr</th>
+                    <th scope="col">Jahr</th>
+                    <th scope="col">Stadt</th>
+                    <th scope="col">Link</th>
+                    <th scope="col">Bild</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let staedtearr = [];
+
+        async function getStaedte() {
+            try {
+                const response = await fetch('./staedte.json');
+                console.log('Response-Objekt:', response); // Debugging: Zeigt die Antwort des fetch-Requests
+                if (!response.ok) {
+                    throw new Error(`HTTP-Fehler! Status: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log('Geladene JSON-Daten:', data); // Debugging: Zeigt die JSON-Daten
+                return data;
+            } catch (error) {
+                console.error('Fehler beim Laden der JSON-Datei:', error); // Debugging: Zeigt Fehler beim Abrufen
+            }
+        }
+
+
+        function createTable() {
+            let input = document.getElementById('filter').value;
+
+            if (staedtearr.length > 0) {
+                let tbody = document.getElementById('tbody');
+                tbody.innerHTML = '';
+                let nr = 1;
+
+                for (let stadtObj of staedtearr) {
+                    if (stadtObj.stadt.toLowerCase().includes(input.toLowerCase())) {
+                        let tr = document.createElement('tr');
+
+                        let td1 = document.createElement('td');
+                        td1.innerText = nr++;
+                        tr.appendChild(td1);
+
+                        let td2 = document.createElement('td');
+                        td2.innerText = stadtObj.jahr;
+                        tr.appendChild(td2);
+
+                        let td3 = document.createElement('td');
+                        td3.innerText = stadtObj.stadt;
+                        tr.appendChild(td3);
+
+                        let td4 = document.createElement('td');
+                        td4.innerHTML = `<a class="btn btn-success btn-sm" href="${stadtObj.link}" target="_blank">Link</a>`;
+                        tr.appendChild(td4);
+
+                        let td5 = document.createElement('td');
+                        td5.innerHTML = `<img src="${stadtObj.bild}" alt="${stadtObj.stadt}" />`;
+                        tr.appendChild(td5);
+
+                        tbody.appendChild(tr);
+                    }
+                }
+            }
+        }
+
+        function init() {
+            getStaedte()
+                .then(jsonObj => {
+                    console.log('JSON-Objekt:', jsonObj); // Debugging: Zeigt das zurückgegebene JSON-Objekt
+                    return jsonObj ? jsonObj.staedte : [];
+                })
+                .then(alleStaedteAlsArray => {
+                    console.log('Array der Städte:', alleStaedteAlsArray); // Debugging: Zeigt das Array
+                    staedtearr = alleStaedteAlsArray;
+                    createTable();
+                })
+                .catch(error => console.error('Fehler bei init:', error));
+        }
+    </script>
+</body>
+</html>
