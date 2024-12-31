@@ -1,0 +1,21 @@
+ul{
+    width: 100%; /* Full width */
+    list-style-type: none; /* Remove bullets */
+    /* margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow: hidden; /* Clear floats */
+    background-color: #333; /* Dark background color */
+}
+li{
+    float: left;    /* Float the list items to the left */
+}
+li a{
+    display: block; /* Display block */
+    color: white;  /* White text color */
+    text-align: center; /* Center text */
+    padding: 14px 16px; /* Padding */
+    text-decoration: none;  /* Remove underline */
+}
+li a:hover{
+    background-color: #111; /* Dark background color on hover */
+}
