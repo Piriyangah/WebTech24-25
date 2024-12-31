@@ -1,0 +1,27 @@
+<h1>Alle Teilnehmerinnen</h1>
+
+<button class="btn btn-secondary" (click)="hideAndShowTable()">{{ textButton }}</button>
+
+@if(tableShow) {
+    <input type="text" class="" [formControl]="search" (input)="filterMember()"/>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nr</th>
+                <th>Vorname</th>
+                <th>Nachname</th>
+                <th>E-Mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(item of filterMembers; track $index; let id = $index) {
+                <tr>
+                    <td>{{ id + 1 }}</td>
+                    <td>{{ item.forename }}</td>
+                    <td>{{ item.surname }}</td>
+                    <td>{{ item.email }}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,26 @@
+/* Stil für die Tabelle */
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Heller Grauton für ungerade Zeilen */
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Weiß für gerade Zeilen */
+}
+
+/* Optional: Stil für den Tabellenrahmen */
+.table {
+    border-collapse: collapse; /* Rahmen der Tabelle zusammenführen */
+    width: 100%;
+    text-align: left;
+}
+
+/* Stil für Tabellenzellen */
+.table th, .table td {
+    padding: 8px; /* Innenabstand */
+    border: 1px solid #ddd; /* Dünner grauer Rahmen */
+}
+
+/* Optional: Hover-Effekt für die Zeilen */
+.table tbody tr:hover {
+    background-color: #ececec; /* Etwas dunklerer Grauton beim Überfahren mit der Maus */
+}
