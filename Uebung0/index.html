@@ -25,6 +25,7 @@
     <a href="#uebung7">Übung 7</a>
     <a href="#uebung8">Übung 8</a>
     <a href="#uebung9">Übung 9</a>
+    <a href="#uebung10">Übung 10</a>
   </nav>
   <!-- MAIN-BODY VON SEITE -->
   <main>
@@ -118,8 +119,8 @@
               &lt;title&gt;Title&lt;/title&gt;
           &lt;/head&gt;
           </code></pre>
-          <a href="../Uebung4/uebung4.html">Ergebnis</a>
       </ul>
+      <a href="../Uebung4/uebung4.html">Ergebnis</a>
     </section>
 
     <section id="uebung4a">
@@ -133,9 +134,8 @@
         <img src="../images/uebung4a_bild2.png" alt="Beispiel für Übung 4a.2" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
         <img src="../images/uebung4a_bild3.png" alt="Beispiel für Übung 4a.3" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
         <li>Ziel der Übung ist die Anwendung von JavaScript.</li>
-        
-        <a href="../Uebung4/uebung4a.html">Ergebnis</a>
       </ul>
+      <a href="../Uebung4/uebung4a.html">Ergebnis</a>
     </section>
 
     <section id="uebung5">
@@ -167,8 +167,8 @@
             <img src="../images/uebung5_bild3.png" alt="Beispiel Übung 5.3" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
           </ul>
           <li>Tipp: Sie laufen in einer Schleife durch das Array, um alle Städte auszulesen. Fügen Sie darin eine Bedingung ein, dass Sie nur die Städte der Tabelle hinzufügen, die der Filter-Eingabe entsprechen.</li>
-          <a href="../Uebung5/uebung5.html">Ergebnis Funktioniert nicht ganz</a>
         </ul>
+        <a href="../Uebung5/uebung5.html">Ergebnis Funktioniert nicht ganz</a>
     </section>
     
     <section id="uebung6">
@@ -185,8 +185,8 @@
         <img src="../images/uebung6_bild3.png" alt="Beispiel Übung 6.3" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
         <p>Diese Komponente enthält eine Tabelle. Es ist nur der Tabellenkopf mit den Spaltenüberschriften zu sehen.</p>
         <li>In der nächsten Übung befüllen wir die Tabelle mithilfe eines Services.</li>
-        <a href="../Uebung6/src/app/app.component.html">Ergebnis mit 'ng serve' in WEBTECH24-25/Uebung6 Pfad</a>
       </ul>
+      <a href="http://localhost:4200/" target="_blank">Ergebnis</a>
     </section>
 
     <section id="uebung7">
@@ -202,20 +202,324 @@
         <img src="../images/uebung7_bild2.png" alt="Beispiel Übung 7.2" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
         <li>Alle Bilder sind nur Anregungen, kann gerne ganz anders aussehen. Gerne können Sie auch Bootstrap einbinden und verwenden (siehe z.B. <a href="https://medium.com/@interviewpro/adding-bootstrap-to-your-angular-project-2e543ef52bef" target="_blank">hier</a>).</li>
       </ul>
+      <a href="http://localhost:55545/" target="_blank">Ergebnis</a>
     </section>
 
     <section id="uebung8">
-      <h2>Übung 8</h2>
+      <h2>Übung 8 - REST-API mit PostgreSQL</h2>
       <ul>
-        <li></li>
+        <li>Erstellen Sie eine <a href="https://freiheit.f4.htw-berlin.de/webtech/backend_pg/#rest-api" target="_blank">REST-API</a> mit folgenden Endpunkten:</li>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Endpunkt</th>
+              <th>Erläuterung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>GET /users</code></td>
+              <td>gebe alle <code>user</code>-Einträge zurück</td>
+            </tr>
+            <tr>
+              <td><code>POST /users</code></td>
+              <td>erstelle einen neuen <code>user</code></td>
+            </tr>
+            <tr>
+              <td><code>GET /users/:name</code></td>
+              <td>gibt den <code>user</code> mit <code>username == name</code> zurück</td>
+            </tr>
+            <tr>
+              <td><code>DELETE /users/:id</code></td>
+              <td>löscht den <code>user</code> mit <code>_id == id</code></td>
+            </tr>
+            <tr>
+              <td><code>PUT /users/:id</code></td>
+              <td>ändert Daten von <code>user</code> mit <code>_id == id</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <li>Geben Sie am Anfang Folgendes im Terminal innerhalb Ihres Projekteordners ein (ohne die Kommentare):</li>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Anweisung</th>
+              <th>Webseite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>mkdir Uebung8</td>
+              <td>Ordner Uebung8 erstellen</td>
+            </tr>
+            <tr>
+              <td>npm init</td>
+              <td>Erstellt das <a href="https://nodejs.org/en/download/" target="_blank">Node.js</a>-Projekt</td>
+            </tr>
+            <tr>
+              <td>npm i express</td>
+              <td><a href="https://expressjs.com/de/" target="_blank">express.js</a></td>
+            </tr>
+            <tr>
+              <td>npm i dotenv</td>
+              <td><a href="https://www.npmjs.com/package/dotenv" target="_blank">dotenv</a></td>
+            </tr>
+            <tr>
+              <td>npm i cors</td>
+              <td><a href="https://www.npmjs.com/package/cors" target="_blank">cors</a></td>
+            </tr>
+            <tr>
+              <td>npm i pg</td>
+              <td><a href="https://www.npmjs.com/package/pg" target="_blank">pg</a></td>
+            </tr>
+            <tr>
+              <td>npm i pg-format</td>
+              <td><a href="https://www.npmjs.com/package/pg-format" target="_blank">pg-format</a> (brauchen Sie hier aber nicht)</td>
+            </tr>
+          </tbody>
+        </table>
+        <li>Vewenden Sie <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> als Datenbankmanagementsystem. Sie können sich entweder eine lokale Instanz <a href="https://www.postgresql.org/download/" target="_blank">installieren</a> oder den HTW-Server <a href="https://ocean.f4.htw-berlin.de/" target="_blank">Ocean.f4.htw-berlin.de</a> nutzen.</li>
+        <li>Implementieren Sie obige CRUD-Funktionalitäten.</li>
+        <li>Beachten Sie!: Es soll <b>kein</b> neuer <code>User</code>angelegt werden, wenn der <code>username</code> bereits verwendet wird und/oder wenn die <code>email</code> bereits verwendet wird:</li>
+        <ul>
+          <li>Weder <code>username</code> noch <code>email</code> exitieren bereits (Response-Body-Datensatz hier von MongoDB erstellt - sieht in Postgres etwas anders aus <code>_id</code>, <code>__v</code>):</li>
+          <img src="../images/uebung8_bild1.png" alt="Beispiel Übung 8.1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <li><code>username</code> existiert bereits:</li>
+          <img src="../images/uebung8_bild2.png" alt="Beispiel Übung 8.2" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <li><code>email</code> existiert bereits:</li>
+          <img src="../images/uebung8_bild3.png" alt="Beispiel Übung 8.3" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        </ul>
+        <li><code>GET /user/:name</code> sucht nach dem <code>username</code> (Response-Body-Datensatz hier von MongoDB erstellt - sieht in Postgres etwas anders aus <code>_id</code>, <code>__v</code>):</li>
+        <img src="../images/uebung8_bild4.png" alt="Beispiel Übung 8.4" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <li>Die <code>SQL-Query</code> für die Erstellung der <b>Tabelle</b> <code>users</code> kann so aussehen: <code>let query = ' DROP TABLE IF EXISTS users; CREATE TABLE users(id serial PRIMARY KEY, username VARCHAR(50), password VARCHAR(50), email VARCHAR(50), role VARCHAR(50));'</code>;</li>
       </ul>
     </section>
 
     <section id="uebung9">
-      <h2>Übung 9</h2>
+      <h2>Übung 9 - Angular, Material Design und Formulare</h2>
       <ul>
-        <li></li>
+        <li>Erstellen Sie ein neues Angular-Projekt <code>Uebung9</code>.</li>
+        <li>Fügen Sie diesem Projekt mithilfe von <code>ng add @angular/material</code> <a href="https://material.angular.io/guide/getting-started" target="_blank">Material Design</a> hinzu.</li>
+        <li>Erzeugen Sie mithilfe von <code>ng generate @angular/material:navigation nav</code> eine neue Komponente <code>nav</code>. Sie dazu <a href="https://material.angular.io/guide/getting-started" target="_blank">Navigation Schematic</a>.</li>
+        <li>Die <code>app.component.html</code> soll nur noch <code>&lt;app-nav /&gt;</code> enthalten (alles andere löschen, auch <code> &lt;router-outlet&gt;&lt;/router-outlet&gt;</code>). Fügen Sie <code>NavComponent</code> dem <code>imports</code>-Array in <code>app.component.ts</code> hinzu (<code>RouterOutlet</code> können Sie dort löschen).</li>
+        <li>Fügen Sie in der <code>nav.component.html</code> unter dem Kommentar <code>&lt;!-- Add Content Here --&gt;</code> den Selektor <code>&lt;router-outlet&gt;&lt;/router-outlet&gt;</code> ein. Fügen Sie <code>RouterOutlet</code> dem <code>imports</code>-Array in der <code>nav.component.ts</code> hinzu.</li>
+        <li>Starten Sie das Projekt mit <code>ng serve</code>. Je nachdem, welches Farbschema Sie gewählt haben, sieht die Seite nun ungefähr so aus:</li>
+        <img src="../images/uebung9_bild1.png" alt="Beispiel Übung 9.1" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <p>Sie können Ihr Farbschema in der <code>angular.json</code> im <code>styles-Array</code> ändern (siehe <a href="https://material.angular.io/guide/theming#using-a-pre-built-theme" target="_blank">hier</a>)</p>
+        <li>Erzeugen Sie drei Komponenten <code>home</code>,<code>table</code> und <code>form</code> und binden diese über die Routen <code>''</code>, <code>read</code> und <code>create</code> dynamisch ein. Suchen Sie in der <code>nav.component.html</code> nach den Menüeinträgen und passen Sie das Menü so an, dass die drei Komponenten darüber aufgerufen werden können.</li>
+        <li>In der <code>FormComponent</code> erzeugen wir uns ein Formular. Schauen Sie sich dazu den Abschnitt <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank">Reactive Forms</a> unter <a href="https://angular.dev/overview" target="_blank">Angular.dev</a> sowie die Abschnitte <a href="https://material.angular.io/components/form-field/overview" target="_blank">Form fields</a> und <a href="https://material.angular.io/components/input/overview" target="_blank">Input</a> unter <a href="https://material.angular.io/" target="_blank">Angular Material</a> an.</li>
+        <ul>
+          <li>Die <code>FormComponent</code> muss <code>ReactiveFormsModule</code> im <code>imports</code>-Array enthalten!</li>
+          <li>Eingabefelder (<code>input</code>) werden in Angular als <code>FormControl</code>-Objekte defininiert, z.B.:</li>
+          <pre><code>
+            this.username = new FormControl('');
+            this.password = new FormControl('');
+            this.email = new FormControl('');
+            this.role = new FormControl('');
+          </code></pre>
+          <p><code>FormControl</code> muss aus <code>@angular/forms</code> importiert werden.</p>
+          <li>Die Verbindung zwischen View (<code>html</code>) und Controller (<code>ts</code>) wird per <code>[formControl]="username"</code> hergestellt, z.B.:</li>
+          <pre><code>
+            &lt;label for="user-name"&gt;username&lt;/label&gt;
+            &lt;input id="user-name" type="text" [formControl]="username" /&gt;
+            
+            &lt;label for="pwd"&gt;password&lt;/label&gt;
+            &lt;input id="pwd" type="password" [formControl]="password" /&gt;
+            
+            &lt;label for="e-mail"&gt;email&lt;/label&gt;
+            &lt;input id="e-mail" type="email" [formControl]="email" /&gt;
+            
+            &lt;label for="role"&gt;role&lt;/label&gt;
+            &lt;select id="role" [formControl]="role"&gt;
+              &lt;option value=""&gt;--Rolle auswählen--&lt;/option&gt;
+              &lt;option value="user"&gt;user&lt;/option&gt;
+              &lt;option value="admin"&gt;admin&lt;/option&gt;
+            &lt;/select&gt;
+            </code></pre>
+          <li>Unter Verwendung von <i>Material Design</i> werden die Elemente <code>&lt;mat-form-field&gt;</code>, <code>&lt;mat-label&gt;</code> und die Eigenschaft <code>matInput</code> verwendet:</li>
+          <pre><code>
+            &lt;mat-form-field&gt;
+              &lt;mat-label for="user-name"&gt;username&lt;/mat-label&gt;
+              &lt;input matInput id="user-name" type="text" [formControl]="username" /&gt;
+            &lt;/mat-form-field&gt;
+            &lt;br/&gt;
+            &lt;mat-form-field&gt;
+              &lt;mat-label for="pwd"&gt;password&lt;/mat-label&gt;
+              &lt;input matInput id="pwd" type="password" [formControl]="password" /&gt;
+            &lt;/mat-form-field&gt;
+            &lt;br /&gt;
+            &lt;mat-form-field&gt;
+              &lt;mat-label for="e-mail"&gt;email&lt;/mat-label&gt;
+              &lt;input matInput id="e-mail" type="email" [formControl]="email" /&gt;
+            &lt;/mat-form-field&gt;
+            &lt;br /&gt;
+            &lt;mat-form-field&gt;
+              &lt;mat-label for="role"&gt;role&lt;/mat-label&gt;
+              &lt;select matNativeControl id="role" [formControl]="role"&gt;
+                &lt;option value=""&gt;--Rolle auswählen--&lt;/option&gt;
+                &lt;option value="user"&gt;user&lt;/option&gt;
+                &lt;option value="admin"&gt;admin&lt;/option&gt;
+              &lt;/select&gt;
+            &lt;/mat-form-field&gt;
+            </code></pre>            
+          <p>In der <code>form.component.ts</code> muss dazu das <code>imports</code>-Array entsprechend befüllt werden:</p>
+          <pre><code>
+            imports: [FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule],
+          </code></pre>
+          <li>Den einzelnen <code>input</code>-Elementen können <i>Validatoren</i> hinzugefügt werden, mit denen überprüft werden kann, ob die Eingabe den Anforderungen genügt. Dazu wird die Klasse <code>Validators</code> aus <code>@angular/forms</code> verwendet (siehe <a href="https://v17.angular.io/guide/form-validation#validating-input-in-reactive-forms" target="_blank">hier</a> und <a href="https://v17.angular.io/api/forms/Validators" target="_blank">hier</a>), z.B.:</li>
+          <pre><code>
+            username = new FormControl('', [Validators.required]);
+            password = new FormControl('', [Validators.required, Validators.minLength(8)]);
+            email = new FormControl('', [Validators.required, Validators.email]);
+            role = new FormControl('', [Validators.required]);
+        
+            getErrorMessageUsername(){
+              if(this.username.hasError('required')) return 'Bitte ausfüllen';
+              else return '';
+            }
+        
+            getErrorMessagePassword(){
+              if(this.password.hasError('required')) return 'Bitte ausfüllen';
+              else if(this.password.hasError('minlength')) return 'Mindestens 8 Zeichen';
+              else return '';
+            }
+        
+            getErrorMessageEmail(){
+              if(this.email.hasError('required')) return 'Bitte ausfüllen';
+              else if(this.email.hasError('email')) return 'Keine gültige E-Mail-Adresse';
+              else return '';
+            }
+        
+            getErrorMessageRole(){
+              if(this.role.hasError('required')) return 'Bitte ausfüllen';
+              else return '';
+            }
+          </code></pre>
+          <p>Die <code>getErrorMessage</code>-Funktionen können dann z.B. so im HTML-Code verwendet werden:</p>
+          <pre><code>
+            &lt;mat-form-field class="wide-width"&gt;
+              &lt;mat-label for="user-name"&gt;username&lt;/mat-label&gt;
+              &lt;input matInput id="user-name" type="text" [formControl]="username" /&gt;
+              @if (username.invalid) {
+              &lt;mat-error&gt;{{getErrorMessageUsername()}}&lt;/mat-error&gt;
+              }
+            &lt;/mat-form-field&gt;
+            &lt;br/&gt;
+            &lt;mat-form-field class="wide-width"&gt;
+              &lt;mat-label for="pwd"&gt;password&lt;/mat-label&gt;
+              &lt;input matInput id="pwd" type="password" [formControl]="password" /&gt;
+              @if (password.invalid) {
+              &lt;mat-error&gt;{{getErrorMessagePassword()}}&lt;/mat-error&gt;
+              }
+            &lt;/mat-form-field&gt;
+            &lt;br /&gt;
+            &lt;mat-form-field class="wide-width"&gt;
+              &lt;mat-label for="e-mail"&gt;email&lt;/mat-label&gt;
+              &lt;input matInput id="e-mail" type="email" [formControl]="email" /&gt;
+              @if (email.invalid) {
+              &lt;mat-error&gt;{{getErrorMessageEmail()}}&lt;/mat-error&gt;
+              }
+            &lt;/mat-form-field&gt;
+            &lt;br /&gt;
+            &lt;mat-form-field class="wide-width"&gt;
+              &lt;mat-label for="role"&gt;role&lt;/mat-label&gt;
+              &lt;select matNativeControl id="role" [formControl]="role" placeholder="role"&gt;
+                &lt;option value="user"&gt;user&lt;/option&gt;
+                &lt;option value="admin"&gt;admin&lt;/option&gt;
+              &lt;/select&gt;
+              @if (role.invalid) {
+              &lt;mat-error&gt;{{getErrorMessageRole()}}&lt;/mat-error&gt;
+              }
+            &lt;/mat-form-field&gt;
+            </code></pre>
+            <li>Button hinzufügen: Für Matrial Design Buttons siehe <a href="https://material.angular.io/components/button/overview" target="_blank">hier</a>, z.B.:</li>
+            <pre><code>
+              &lt;button mat-raised-button [disabled]="formInvalid()" (click)="register()"&gt;Registrieren&lt;/button&gt;
+            </code></pre>
+            <p>Dazu muss <code>MatButtonModule</code> in das <code>imports</code>-Array von <code>form.component.ts</code> eingefügt werden.</p>
+            <li>Der Button ist so lange <code>disabled</code>, so lange das Formular nicht korrekt ausgefüllt ist, d.h. <code>formInvalid()</code> liefert so lange ein <true>true</true> zurück, so lange (mindestens) einer der Fehler auftritt, der eine Error-Message erzeugt (siehe oben). Schreiben Sie die Funktion <code>formInvalid()</code> entsprechend.</li>
+            <li>Bei Klick auf den Button (wenn er <code>enabled</code> ist), wird die Funktion <code>register()</code> aufgerufen. Implementieren Sie diese Funktion so, dass ein Objekt der Art</li>
+            <img src="../images/uebung9_bild2.png" alt="Beispiel Übung 9.2" style="width: 500px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <p>auf die Konsole ausgegeben wird.</p>
+            <li>In Übung 10 werden wir die so erzeugten Objekte an das Backend senden und in die Datenbank speichern. Außerdem befüllen wir dann die <code>TableComponent</code> mit Objekten aus der Datenbank.</li>
+        </ul>
       </ul>
+    </section>
+
+    <section id="uebung10">
+      <h2>Übung 10 - Frontend-Backend-Anbindung ------ Linkseinbinden</h2>
+      <ul>
+          <li>Starten Sie das Backend aus <a href="../Uebung8" target="_blank">Übung 8</a>.</li>
+          <li>Nutzen Sie das Frontend aus <a href="" target="_blank">Übung 9</a> und erweitern es wie folgt:</li>
+          <ul>
+            <li>Binden Sie in die <code>app.config.ts</code> das <a href="https://v17.angular.io/api/common/http/HttpClientModule" target="_blank">HttpClientModule</a> ein:</li>
+            <pre><code>
+              import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+              import { provideRouter } from '@angular/router';
+
+              import { routes } from './app.routes';
+              import { HttpClientModule } from '@angular/common/http';
+
+              export const appConfig: ApplicationConfig = {
+                providers: [provideRouter(routes), importProvidersFrom(HttpClientModule)]
+              };
+            </code></pre>
+            <li>Erstellen Sie sich einen <code>Backend</code>-Service und ein <code>User</code>-Interface mithilfe der Angular CLI:</li>
+            <pre><code>
+              ng g s shared/backend
+              ng g i shared/user
+            </code></pre>
+            <li>Definieren Sie im <code>User</code>-Interface die Eigenschaften <code>username</code>, <code>password</code>, <code>email</code>, <code>role</code> (alles <code>string</code> s).</li>
+            <li>Definieren Sie sich im <code>Backend</code>-Service Funktionen für die Anbindung der Backend-Endpunkte (<code>GET /users</code>, <code>POST /users</code>, <code>GET /users/:name</code>, <code>DELETE /users/:id</code> und <code>PUT / users/:id</code>). Beachten Sie, dass jeweils ein <a href="https://rxjs.dev/guide/observable" target="_blank">Observable</a> ückgegeben wird, z.B.:</li>
+            <pre><code>
+              import { HttpClient } from '@angular/common/http';
+              import { Injectable } from '@angular/core';
+              import { User } from './user';
+              import { Observable } from 'rxjs';
+
+              @Injectable({
+                providedIn: 'root'
+              })
+              export class BackendService {
+                backendUrl = 'http://localhost:4000';
+
+                constructor(private http: HttpClient) { }
+
+                getAllUsers(): Observable<User[]> {
+                  let endpoint = '/users';
+                  return this.http.get<User[]>(this.backendUrl + endpoint);
+                }
+
+                deleteOneMember(id: string): Observable<any> {
+                  let endpoint = '/users';
+                  return this.http.delete<any>(this.backendUrl + endpoint + "/" + id);
+                }
+
+                createNewUser(user: User): Observable<User> {
+                  let endpoint = '/users';
+                  return this.http.post<User>(this.backendUrl + endpoint, user);
+                }
+              }
+            </code></pre>
+            <li>Binden Sie in die <code>Register</code>-Komponente den <code>Backend</code>-Service ein, z.B. <code>private bs = inject(BackendService);</code>. Lesen Sie alle Werte aus dem Registrierungsformular aus und erzeugen sich damit ein neues <code>user</code>-Objekt. Rufen Sie die Funktion <code>createNewUser(user)</code> aus dem <code>Backend</code>-Service auf, z.B.:</li>
+            <pre><code>
+              this.bs.createNewUser(user).subscribe({
+                next: (response) => console.log('response', response),
+                error: (err) => console.log(err),
+                complete: () => console.log('register completed')
+              });
+            </code></pre>
+            <p>Prüfen Sie, ob die Daten in die Datenbank gespeichert werden.</p>
+            <li>Binden Sie in die <code>Table</code>-Komponente den <code>Backend</code>-Service ein und erstellen sich dort eine <code>readAll()</code>-Funktion, in der die <code>getAllUsers()</code>-Funktion des <code>Backend</code>-Services aufgerufen wird.</li>
+            <ul>
+              <li>Befüllen Sie mit der Response ein <code>users</code>-Array.</li>
+              <li>Rufen Sie in der <code>ngOnInit()</code>code> der Komponente die <code>readAll()</code>-Funktion auf (die Komponente muss dazu <code>OnInit</code> implementieren).</li>
+              <li>Lesen Sie in einer Tabelle in der <code>table.component.html</code> alle User aus dem <code>users</code>-Array aus.</li>
+              <li>Richten Sie in der Tabelle eine Spalte <code>Delete</code> ein, deren Einträge aus Buttons bestehen. Für das Klick-Ereignis soll eine <code>delete(id)</code>-Funktion aufgerufen werden, die den Eintrag aus der Datenbank löscht. Rufen Sie in der <code>delete(id)</code>-Funktion auch die <code>readAll()</code>-Funktion erneut auf, damit das <code>users</code>-Array aktualisiert wird.</li>
+            </ul>
+          </ul>
+        </ul>
+      <a href="../Uebung0/index.html">Ergebnis</a>
     </section>
 
   </main>
