@@ -7,8 +7,17 @@ const client = require('./db');
 // test
 router.get('/test', async(req, res) => {
     //Hier wird die Tabelle erstellt:
-    const anfragen = //"DROP TABLE IF EXISTS users; " +
-                     "CREATE TABLE users(id serial PRIMARY KEY, name VARCHAR(50), password VARCHAR(255), email VARCHAR(50), role VARCHAR(50))"
+    const anfragen = `
+        DROP TABLE IF EXISTS users;
+        CREATE TABLE IF NOT EXISTS users (
+            id serial PRIMARY KEY, 
+            name VARCHAR(50), 
+            password VARCHAR(255), 
+            email VARCHAR(50), 
+            role VARCHAR(50)
+        )
+    `;
+
     client.query(anfragen);
     
     res.send({ message: "jetzt mit PostgreSQL" });
@@ -24,7 +33,11 @@ router.post('/piri_users',async(req, res) => {
     // Variante2: prepared statement (in array füllen)
     const anfragen = "INSERT INTO users(name, role) VALUES($1, $2) RETURNING *";
     let result = await client.query(anfragen, [username, role]);
-    console.log('result', result);
-    res.send({message: "Datensatz erzeugt"});
-})
+    // Varainte 1: gibt nur den message zurück
+    //console.log('result', result); // 
+    //res.send({message: "Datensatz erzeugt"}); 
+    //Varainte 2: gibt die erste Zeile zurück
+    console.log('result', result.rows[0]); 
+    res.send(result.rows[0]); 
+});
 module.exports = router;
