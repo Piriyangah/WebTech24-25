@@ -1,0 +1,6 @@
+# Die Sachen soll nicht berücksichtigt werden
+# -- node_modules ist nützlich nicht mit hochzupushen, es steht unter packet.json von welchen Packeten das Projekt abhängig ist. Es reicht beim clone oder pullen dann "npm i" auszuführen. Es installiert alles was nötig ist und erstellt neuen node-modules Ordner
+node_modules
+# -- .env ist wichtig! Wenn es auf Remote-Repositoris gepusht wird, soll es die credentials (Anmeldeinformationen) nicht mitgepusht werden
+.env 
+.DS_Storage
